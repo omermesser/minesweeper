@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper By Messer</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1 id="title">Minesweeper By Omer Messer</h1>
+    <header>
+        <button id="btnSettings">Settings</button>
+        <button id="btnRestart">Restart</button>
+        <button id="btnRules">Rules</button>
+    </header>
+    <div id="container">
+        <div id="board" class="screen"></div>
+        <div id="gameOverWindow" class="screen">
+            <h1 id="gameOverTitle">Game Over!</h1>
+            <div id="btnGameOverRestart">🔄</div>
+        </div>
+        <div id="settingsWindow" class="screen">
+            <h1>Mines</h1>
+            <input type="number" id="minesInput" value="10">
+            <h1>Tiles In Row</h1>
+            <input type="number" id="tilesInput" value="9">
+            <h1>Board Size</h1>
+            <input type="range" id="boardSizeInput" value="575" min="375" max="770">
+            <div id="btnApply">✔️</div>
+            <div id="btnCloseSettings" class="btnClose">❌</div>
+            <div id="btnResetSettings" class="btnClose">🆕</div>
+        </div>
+        <div id="rulesWindow" class="screen">
+            <p>Minesweeper is a game where mines are hidden in a grid of squares. <b style="color:darkgreen;">Safe squares</b> have numbers telling you how many mines touch the square. You can use the number clues to solve the game by opening all of the safe squares. If you click on a <b style="color:darkred;">mine</b> you lose the game!</p>
+            <p>Minesweeper always makes the <b style="color:darkgreen;">first click safe</b>. You open squares with the <b style="color:darkblue;">left mouse button</b> and put flags on mines with the <b style="color:darkblue;">right mouse button</b>. Pressing the right mouse button again changes your flag into a questionmark. When you open a square that does not touch any mines, it will be empty and the adjacent squares will automatically open in all directions until reaching squares that contain numbers.</p>
+            <P>The three difficulty levels are <b style="color:darkblue;">Beginner</b> (8x8 or 9x9 with 10 mines), <b style="color:darkgreen;">Intermediate</b> (16x16 with 40 mines) and <b style="color:darkred;">Expert</b> (20x20 with 99 mines). The game ends when all safe squares have been opened. A counter shows the number of flags marked (hitting negative mines means you marked too many tiles).</P>
+            <div id="btnCloseRules" class="btnClose">❌</div>
+        </div>
+        <div id="mineCounter">Mines Left: <span id="mineCounterNumber">10</span></div>
+    </div>
+</body>
+
+<script src="./libraries/domElements.js"></script>
+<script src="./libraries/variables.js"></script>
+<script src="./libraries/eventListeners.js"></script>
+<script src="./libraries/main.js"></script>
+
+
+</html>

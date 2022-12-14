@@ -1,0 +1,129 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    margin-top: 50px;
+}
+header{
+    margin-bottom: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+header button{
+    width: 150px;
+    height: 50px;
+    background-color:#d6a27f;
+    border:5px darkgray solid;
+    color: white;
+    font-size: 30px;
+}
+.screen{
+    background-color:#d6a27f;
+    height: 575px;
+    width: 575px;
+    border:5px darkgray solid;
+    display: flex;
+}
+#container{
+    height: 100%;
+    position: relative;
+}
+#board{
+    align-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+}
+#gameOverWindow{
+    position: absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.8s linear;
+}
+#gameOverWindow #gameOverTitle{
+    border-radius: 20px;
+    font-size: 120px;
+    margin-bottom: 0;
+    background-color: rgba(236, 60, 60, 0.8);
+}
+#btnGameOverRestart{
+    font-size: 100px;
+}
+#settingsWindow{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#settingsWindow h1{
+    color: white;
+    font-size: 30px;
+}
+#settingsWindow input{
+    text-align: center;
+    font-size: 40px;
+    width: 25%;
+    height: 40px;
+    border: 0;
+
+}
+.btnClose{
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#btnResetSettings{
+    right:50px
+}
+#btnApply{
+    font-size: 40px;
+}
+#board div{
+    color: black;
+    box-sizing: border-box;
+    border: 1px white solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#rulesWindow{
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#rulesWindow p{
+    width: 75%;
+}
+.checked{
+    background-color: #dbb99f;
+}
+#mineCounter{
+    position: absolute;
+    top: 10px;
+    right: -350px;
+    width: 330px;
+    font-size: 50px;
+}
+#mineCounterNumber{
+    color: #8b0404;
+}
+#gameOverWindow.fadeIn{
+    opacity: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
